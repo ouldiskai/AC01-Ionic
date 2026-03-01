@@ -1,20 +1,61 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Blank
+      Ex. 1
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-input label="Digite o valor em graus" labelPlacement="floating" type="number" 
+      [(ngModel)]="valorGrau"></ion-input>
+  <div>
+    <ion-button expand='block'(click)="converteCtoF()">Converter para Fahrenheit (°F)</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button (click)="converteFtoC()" expand="block">Converter para Celsius (°C)</ion-button>
   </div>
+  <ion-label>{{convertido}}</ion-label>
+  <br><br>
+    <ion-toolbar color="primary">
+    <ion-title>
+      Ex. 2
+    </ion-title>
+  </ion-toolbar>
+
+    <ion-input label="Lado 1" labelPlacement="floating" type="number" 
+      [(ngModel)]="l1"></ion-input>
+    <ion-input label="Lado 2" labelPlacement="floating" type="number" 
+    [(ngModel)]="l2"></ion-input>
+    <ion-input label="Lado 3" labelPlacement="floating" type="number" 
+    [(ngModel)]="l3"></ion-input>
+  <div>
+    <ion-button expand='block' (click)="verificar()">Verificar</ion-button>
+
+  </div>
+  <ion-label>{{triangulo}}</ion-label>
+  <br><br>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Ex. 3
+    </ion-title>
+  </ion-toolbar>
+
+  <ion-input label="Nota 1" labelPlacement="floating" type="number" 
+      [(ngModel)]="n1"></ion-input>
+    <ion-input label="Nota 2" labelPlacement="floating" type="number" 
+    [(ngModel)]="n2"></ion-input>
+    <ion-input label="Nota 3" labelPlacement="floating" type="number" 
+    [(ngModel)]="n3"></ion-input>
+    <ion-input label="Nota 4" labelPlacement="floating" type="number" 
+    [(ngModel)]="n4"></ion-input>
+  <div>
+    <ion-button expand='block' (click)="media()">Fazer a média</ion-button>
+  </div>
+  <ion-label>{{resultado}}</ion-label>
+
 </ion-content>
+
+
+
+
+  
